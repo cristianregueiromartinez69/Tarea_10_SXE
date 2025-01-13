@@ -192,7 +192,36 @@ Como sabemos que hemos instalado la versión 17 y es la versión community 🤔,
 
 ####   FELICIDADES, HAS INSTALADO ODOO CON DOCKER COMPOSE, AHORA PODRÁS TENER BIEN ORDENADO TODO TU NEGOCIO/EMPRESA, BUEN TRABAJO 🥳🥳🥳
 
+### 6. Verificación instalación PgAdmin 😄
+Como ya tenemos el docker-compose.yml levantado, simplemente abrimos un navegador, nos vamos a la url y ponemos esto.
 
+```bash
+http://(ip de tu entorno de trabajo):5050
+```
+Nos debería de salir algo así.
+![PgAdmin1](https://github.com/user-attachments/assets/b796afd0-0d09-4c21-8860-cbb754becb27)
+
+Introducimos las credenciales, las que tenemos en el docker-compose.yml y le damos a enter. Nos debería de mandar aquí.
+![PgAdmin2](https://github.com/user-attachments/assets/e708d3a8-de4b-40b6-8646-0cde3a3de29d)
+
+**Problemas encontrados** :worried:
+Al entrar en PgAdmin, no sale automáticamente el servicio de la base de datos vinculado, pero lo podemos vincular perfectamente desde aquí, sigue estos pasos
+
+- Le tenemos que dar donde pone Add new service, nos daldrá algo así
+
+![PgAdmin3](https://github.com/user-attachments/assets/27bd536c-e192-4ed7-91de-f8efbe2581e0)
+
+Los apartados que nos interesan son el de General y connection. En el de general le ponemos un nombre al servicio y listo, luego nos vamos a connect
+
+- Introducimos las credenciales como en la siguiente imagen y le damos a save
+
+![PgAdmin4](https://github.com/user-attachments/assets/921f7a37-70b4-4765-a221-40b7a8c307b9)
+
+- Tenemos las bases creadas aquí
+
+![PgAdmin5](https://github.com/user-attachments/assets/f152b8be-612e-400c-9a29-11795d175492)
+
+#### Como se puede observar en la imagen, tenemos tanto la base que se creó con el docker-compose.yml como la que creamos nosotros mismos en la pagina de odoo. Si te salió todo lo anterior, FELICIDADES 🥳🥳🥳, has instalado odoo, postgresSQL y PgAdmin con docker, mucha suerte en tus proyectos.
 
 
 
