@@ -45,3 +45,22 @@ services: #array de los servicios que vamos a utilizar
     volumes: #realizamos la persistencia de datos ya que si se corrompe el servicio y no hacemos esto, perdemos todo
       - odoo-web-data:/var/lib/odoo
 ```
+
+### 3.  Creación estructura docker-compose postgresSQL 😄
+
+
+```bash
+#copia y pega esto en el docker-compose.yml justo después que lo que ya escribiste de odoo
+ db: #nombre del servicio de la base de datos
+    image: postgres:15 #imagen que vamos a descargar de postgresSQL
+    container_name: postgresSQLContainer #nombre del contenedor
+    restart: unless-stopped #indicamos que el servicio no se va a detener a menos que lo hagamos nosotros
+    environment: #variables de entorno del servicio
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: myodoo
+      POSTGRES_USER: odoo
+    volumes: #realizamos la persistencia de datos ya que si se corrompe el servicio y no hacemos esto, perdemos todo
+      - odoo-db-data:/var/lib/postgresql/data
+    ports: #hacemos que sea accesible desde el puerto 5432, que es el puerto por defecto para postgresSQL
+      - "5432:5432"
+```
