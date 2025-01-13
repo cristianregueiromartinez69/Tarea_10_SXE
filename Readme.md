@@ -143,3 +143,58 @@ volumes: #Los volumenes de arriba, los tenemos que declarar fuera para que sean 
   pgadmin-data: #volumen de persistencia de datos de PgAdmin
 ```
 
+### 5. Verificación instalación odoo 😄
+
+Lo primero, como verificamos que se instala odoo 🤔, sigue estos pasos:
+1. guarda el archivo docker-compose.yml
+2. en la misma carpeta donde está el docker-compose.yml, ejecuta esto en el terminal
+
+```bash
+sudo docker compose up
+#también podéis hacer
+sudo docker compose up -d
+#mejor usar el primero ya que este os dice los errores que puede haber en la instalación
+```
+
+Tendría que salir algo como esto.
+![instalacionTodo2](https://github.com/user-attachments/assets/8f3be63e-65ec-492a-a940-cafbe643d8a7)
+
+Ahora vamos a un navegador y escribimos en la url lo siguiente:
+```bash
+http://(ip de tu entorno de trabajo):8069
+```
+Si seguisteis los pasos al pie de la letra, os tendría que salir algo así.
+![odoo1](https://github.com/user-attachments/assets/89ffc97f-77e2-4a5f-882a-e821eccbb2fa)
+
+Nos pide que creemos una base de datos.
+
+**Atención** 😱😱😱
+No pongáis la base que creasteis en el docker-compose.yml ya que os dirá que ya existe y os dará error, poned otra distinta, como esta por ejemplo
+![odoo2](https://github.com/user-attachments/assets/9194960e-d0ee-434f-9630-f4410559dbd3)
+
+Una vez hecho esto, le damos a crear database y esperamos un poco, tened paciencia 🥰. Después os redirigirá a esta página
+![odoo3](https://github.com/user-attachments/assets/fba0b7a8-383b-4378-a890-93b7c6919904)
+
+Introducimos las credenciales que pusimos en la página anterior y le damos a enter. Nos debería de llevar a odoo como aquí.
+![odoo4](https://github.com/user-attachments/assets/6b11e9ff-eef7-4d2e-9c04-c75ed0803aa0)
+
+Como sabemos que hemos instalado la versión 17 y es la versión community 🤔, haced esto.
+1. Nos vamos a settings dentro de odoo
+
+
+![odoo5](https://github.com/user-attachments/assets/c956973b-f43e-4850-a07f-c641a73d660e)
+
+
+2. Entramos y estaremos en esta página
+![odoo6](https://github.com/user-attachments/assets/c57b2a48-dff5-4014-ade3-667bf5e523b5)
+3. hacemos scroll hacia abajo y ahí estará la versión de odoo y la community al lado
+![odoo7](https://github.com/user-attachments/assets/9fa361a5-601f-4dcb-97bc-a465002c753f)
+
+####   FELICIDADES, HAS INSTALADO ODOO CON DOCKER COMPOSE, AHORA PODRÁS TENER BIEN ORDENADO TODO TU NEGOCIO/EMPRESA, BUEN TRABAJO 🥳🥳🥳
+
+
+
+
+
+
+
