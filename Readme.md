@@ -26,3 +26,22 @@ nano docker-compose.yml
 
 Se nos abrirá un archivo nano para hacer el docker-compose.yml, el nombre de la carpeta puede ser el que quieras
 
+### 2. Creación estructura docker-compose odoo 😄
+```bash
+#Copia lo siguiente en el docker compose
+services: #array de los servicios que vamos a utilizar
+  web: #nombre del servicio de odoo
+    image: odoo:17.0 #descargamos la versión 17, pese a que la más reciente es la 18, pero la 17 recibe mantenimiento
+    container_name: odooWebContainer #nombre del contenedor
+    restart: unless-stopped #indicamos que el servicio no se va a detener a menos que lo hagamos nosotros
+    depends_on: #indicamos que odoo depende de la base de datos para iniciar para que odoo no inicie antes
+      - db
+    ports: #indicamos que el servicio será accesible desde el puerto 8069, ya que si no no podríamos entrar a odoo
+      - "8069:8069"
+    environment: #variables de entorno del servicio de odoo
+      HOST: db
+      USER: odoo
+      PASSWORD: myodoo
+    volumes: #realizamos la persistencia de datos ya que si se corrompe el servicio y no hacemos esto, perdemos todo
+      - odoo-web-data:/var/lib/odoo
+```
