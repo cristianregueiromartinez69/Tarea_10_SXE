@@ -12,8 +12,8 @@
 ### 1. Creación del archivo docker-compose-yml y pasos previos 😄
 
 **Requisitos previos** 😱
-1. Conexión a intener
-2. Entorno de trabajo con docker instalado
+1. Conexión a intenet.
+2. Entorno de trabajo con docker instalado.
 
 Si no tienes docker instalado, te dejo un enlace [aquí](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-es)
 
@@ -24,7 +24,7 @@ cd dockerOdoo
 nano docker-compose.yml
 ```
 
-Se nos abrirá un archivo nano para hacer el docker-compose.yml, el nombre de la carpeta puede ser el que quieras
+Se nos abrirá un archivo nano para hacer el docker-compose.yml, el nombre de la carpeta puede ser el que quieras.
 
 ### 2. Creación estructura docker-compose odoo 😄
 ```bash
@@ -146,8 +146,8 @@ volumes: #Los volumenes de arriba, los tenemos que declarar fuera para que sean 
 ### 5. Verificación instalación odoo 😄
 
 Lo primero, como verificamos que se instala odoo 🤔, sigue estos pasos:
-1. guarda el archivo docker-compose.yml
-2. en la misma carpeta donde está el docker-compose.yml, ejecuta esto en el terminal
+1. guarda el archivo docker-compose.yml.
+2. en la misma carpeta donde está el docker-compose.yml, ejecuta esto en el terminal.
 
 ```bash
 sudo docker compose up
@@ -169,10 +169,10 @@ Si seguisteis los pasos al pie de la letra, os tendría que salir algo así.
 Nos pide que creemos una base de datos.
 
 **Atención** 😱😱😱
-No pongáis la base que creasteis en el docker-compose.yml ya que os dirá que ya existe y os dará error, poned otra distinta, como esta por ejemplo
+No pongáis la base que creasteis en el docker-compose.yml ya que os dirá que ya existe y os dará error, poned otra distinta, como esta por ejemplo.
 ![odoo2](https://github.com/user-attachments/assets/9194960e-d0ee-434f-9630-f4410559dbd3)
 
-Una vez hecho esto, le damos a crear database y esperamos un poco, tened paciencia 🥰. Después os redirigirá a esta página
+Una vez hecho esto, le damos a crear database y esperamos un poco, tened paciencia 🥰. Después os redirigirá a esta página.
 ![odoo3](https://github.com/user-attachments/assets/fba0b7a8-383b-4378-a890-93b7c6919904)
 
 Introducimos las credenciales que pusimos en la página anterior y le damos a enter. Nos debería de llevar a odoo como aquí.
@@ -205,19 +205,19 @@ Introducimos las credenciales, las que tenemos en el docker-compose.yml y le dam
 ![PgAdmin2](https://github.com/user-attachments/assets/e708d3a8-de4b-40b6-8646-0cde3a3de29d)
 
 **Problemas encontrados** :worried:
-Al entrar en PgAdmin, no sale automáticamente el servicio de la base de datos vinculado, pero lo podemos vincular perfectamente desde aquí, sigue estos pasos
+Al entrar en PgAdmin, no sale automáticamente el servicio de la base de datos vinculado, pero lo podemos vincular perfectamente desde aquí, sigue estos pasos.
 
-- Le tenemos que dar donde pone Add new service, nos daldrá algo así
+- Le tenemos que dar donde pone Add new service, nos saldrá algo así.
 
 ![PgAdmin3](https://github.com/user-attachments/assets/27bd536c-e192-4ed7-91de-f8efbe2581e0)
 
-Los apartados que nos interesan son el de General y connection. En el de general le ponemos un nombre al servicio y listo, luego nos vamos a connect
+Los apartados que nos interesan son General y connection. En general ponemos un nombre al servicio y listo, luego vamos a connect.
 
-- Introducimos las credenciales como en la siguiente imagen y le damos a save
+- Introducimos las credenciales como en la siguiente imagen y le damos a save.
 
 ![PgAdmin4](https://github.com/user-attachments/assets/921f7a37-70b4-4765-a221-40b7a8c307b9)
 
-- Tenemos las bases creadas aquí
+- Tenemos las bases creadas aquí.
 
 ![PgAdmin5](https://github.com/user-attachments/assets/f152b8be-612e-400c-9a29-11795d175492)
 
